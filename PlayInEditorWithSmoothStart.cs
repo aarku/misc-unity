@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEditor;
-using System.Collections;
 
+// Helps avoid the annoying time jerk at the start when you play your game in the editor.
+// The license is the "Unlicense." See LICENSE for details
+// Enjoy! @jonathanczeck
 public static class PlayInEditorWithSmoothStart {
 	static float savedMaximumDeltaTime = 0f;
 	
