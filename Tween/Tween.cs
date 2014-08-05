@@ -3,7 +3,9 @@
 // Enjoy!
 
 /*
-	The Tween class is for animating around Transforms and other values. You queue up little "programs" for the Tween class to execute, then call Run() to start the animations.
+	The Tween class is for animating around Transforms and other values.
+	You queue up little "programs" for the Tween class to execute, then
+	call Run() to start the animations.
 	
 	Example 1, Basic usage:
 	
@@ -11,7 +13,12 @@
 		Tween.Move(new Vector3(3f, 0f, 0f));
 		Tween.Run();
 		
-		This will animate the local position of the transform to (3,0,0) in local space. A Tween program begins with Tween.Begin(theTransform). You can call Tween.Begin() again to queue up another program. Multiple programs can be queued up and then Tween.Run() at once. Tween.Run() will run all the programs queued up and clear the queue.
+		This will animate the local position of the transform to (3,0,0)
+		in local space. A Tween program begins with
+		Tween.Begin(theTransform). You can call Tween.Begin() again to
+		queue up another program. Multiple programs can be queued up and
+		then Tween.Run() at once. Tween.Run() will run all the programs
+		queued up and clear the queue.
 
 	Example 2, Setting defaults:
 	
@@ -22,7 +29,9 @@
 		Tween.Rotate(new Vector3(0f, 360f, 0f));
 		Tween.Run();
 		
-		You may set the Space, Duration, and Ease that the subsequent commands in the Tween program will use. When you Tween.Begin() again, they are reset.
+		You may set the Space, Duration, and Ease that the subsequent
+		commands in the Tween program will use. When you Tween.Begin()
+		again, they are reset.
 	
 	Example 3, Specifying directly instead of setting defaults:
 	
@@ -31,7 +40,10 @@
 		Tween.Move(Vector3.up * 5f, Space.World, 2f, Ease.JumpAndBounce);
 		Tween.Run();
 		
-		You may optionally specify Space, Duration, and Ease directly instead of setting the defaults of the program. There are multiple overloads for many of these functions so that you may specify only what you want to.
+		You may optionally specify Space, Duration, and Ease directly
+		instead of setting the defaults of the program. There are
+		multiple overloads for many of these functions so that you may
+		specify only what you want to.
 		
 	Example 4, Running multiple Tween programs in parallel:
 	
@@ -41,7 +53,8 @@
 		Tween.MoveRelativeTo(transform, Space.World, Vector3.forward);
 		Tween.Run();
 		
-		This will perform both programs at the same time so both Transforms will move at the same time.
+		This will perform both programs at the same time so both
+		Transforms will move at the same time.
 		
 	Example 5, Inserting a pause and parenting:
 	
@@ -55,7 +68,12 @@
 		Tween.Move(Vector3.zero);
 		Tween.Run();
 		
-		This will move the transform to (0,2,0), wait a second, rotate and scale the transform, then wait until the previous instructions complete. Finally, it will set a new parent to the transform and move the transform back to (0,0,0) local space. Tween.Flush() is nearly identical to Tween.Delay(), except you don't have to think about what duration to pass. Notice that you could have
+		This will move the transform to (0,2,0), wait a second,
+		rotate and scale the transform, then wait until the previous
+		instructions complete. Finally, it will set a new parent to
+		the transform and move the transform back to (0,0,0) local
+		space. Tween.Flush() is nearly identical to Tween.Delay(),
+		except you don't have to think about what duration to pass.
 	
 	Example 6, Using Tween.Custom():
 	
@@ -122,7 +140,10 @@
 			}
 		}
 	
-	You can do some pretty cool animations with this Tween class without thinking too hard. Need any conveniences? Find some bugs? Talk to Jon. Have fun and remember to perform your monthly safety check on your garage door.
+	You can do some pretty cool animations with this Tween class
+	without thinking too hard. Need any conveniences? Find some bugs?
+	Talk to Jon. Have fun and remember to perform your monthly safety
+	check on your garage door, if applicable.
 */
 
 
